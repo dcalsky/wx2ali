@@ -137,3 +137,9 @@ Temporary Items
 .apdisk
 
 dist/
+node_modules
+dist
+data.json
+wxdata.json
+antdata.json
+yarn-error.log

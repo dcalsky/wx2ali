@@ -7,11 +7,12 @@
   "scripts": {
     "dev": "tsc -w",
     "test": "mocha",
-    "start": "./bin/main.js"
+    "start": "./bin/main.js",
+    "spider:ant": "node ./spider/spider.js ant",
+    "spider:wx": "node ./spider/spider.js wx"
   },
   "bin": "./bin/main.js",
   "dependencies": {
-    "@types/node": "^8.0.29",
     "babel-core": "^6.26.0",
     "babel-types": "^6.26.0",
     "babylon-walk": "^1.0.2",
@@ -22,11 +23,14 @@
     "yargs": "^9.0.1"
   },
   "devDependencies": {
+    "@types/node": "^8.0.29",
     "@types/babel-core": "^6.25.2",
     "@types/babel-types": "^6.25.1",
-    "@types/node": "^8.0.29",
     "chai": "^4.1.2",
     "mocha": "^3.5.3",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.2",
+    "cheerio": "^1.0.0-rc.2",
+    "phantom": "^4.0.5",
+    "superagent": "^3.6.0"
   }
 }
