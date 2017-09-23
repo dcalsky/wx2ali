@@ -1,6 +1,7 @@
 import { transform as trans, transformFromAst } from 'babel-core'
 const walk = require('babylon-walk')
 import * as t from 'babel-types';
+import { get_property_mapping } from './Compare';
 
 // {
 //   type: 'function_name',
@@ -26,7 +27,6 @@ import * as t from 'babel-types';
 
 const visitors = {
   CallExpression(node, state, c) {
-    // console.log(node)
     if (t.isIdentifier(node.callee)) {
       const name = node.callee.name
       node.callee.name = name === 'wx' ? 'my' : name
@@ -35,12 +35,15 @@ const visitors = {
     }
   },
   MemberExpression(node, state) {
+    const mappings = get_property_mapping()
     // Defaultly, this node is an identifier
     if (node.object.name === 'wx') {
       node.object.name = 'my'
-      if (node.property.name === 'fuck') {
-        node.property.name = 'yifei'
-      }
+      mappings.forEach(mapping => {
+        if (mapping && mapping.from === node.property.name) {
+          node.property.name = mapping.to
+        }
+      })
     }
   }
 }

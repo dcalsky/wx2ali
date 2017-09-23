@@ -484,6 +484,10 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+leven@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/leven/-/leven-2.1.0.tgz#c2e7a9f772094dee9d34202ae8acce4687875580"
+
 load-json-file@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
@@ -764,6 +768,12 @@ shebang-regex@^1.0.0:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+similarity@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/similarity/-/similarity-1.1.1.tgz#41c370b4f5d0f904d3d4907f96f2e3d32be9b931"
+  dependencies:
+    leven "^2.0.0"
 
 slash@^1.0.0:
   version "1.0.0"
