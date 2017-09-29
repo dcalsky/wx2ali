@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc -w",
+    "prod": "tsc",
     "test": "mocha",
     "start": "./bin/main.js",
     "spider:ant": "node ./spider/spider.js ant",

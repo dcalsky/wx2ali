@@ -2,3 +2,7 @@ language: node_js
 node_js:
   - "8"
   - "7"
+script:
+  - npm run prod
+  - cp src/antdata.json dist/antdata.json && cp src/wxdata.json dist/wxdata.json
+  - npm run test
